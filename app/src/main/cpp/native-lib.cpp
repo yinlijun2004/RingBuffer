@@ -20,7 +20,7 @@ extern "C" {
         ring_buffer_dump(ring);
         uint8_t consume[12] = {0};
         app_sys_debug("consume %d data", 8);
-        ret = ring_buffer_append_consume_data(ring, consume, 8);
+        ret = ring_buffer_consume_data(ring, consume, 8);
         assert(ret == 5);
         app_sys_debug("consume %d data indeed", ret);
         ring_buffer_dump(ring);
@@ -33,7 +33,7 @@ extern "C" {
         app_sys_debug("add %d data indeed", ret);
         ring_buffer_dump(ring);
         app_sys_debug("consume %d data", 8);
-        ret = ring_buffer_append_consume_data(ring, consume, 8);
+        ret = ring_buffer_consume_data(ring, consume, 8);
         assert(ret == 5);
         app_sys_debug("consume %d data indeed", ret);
         ring_buffer_dump(ring);
@@ -46,7 +46,7 @@ extern "C" {
         app_sys_debug("add %d data indeed", ret);
         ring_buffer_dump(ring);
         app_sys_debug("consume %d data", 2);
-        ret = ring_buffer_append_consume_data(ring, consume, 2);
+        ret = ring_buffer_consume_data(ring, consume, 2);
         assert(ret == 2);
         app_sys_debug("consume %d data indeed", ret);
         ring_buffer_dump(ring);
@@ -59,7 +59,7 @@ extern "C" {
         app_sys_debug("add %d data indeed", ret);
         ring_buffer_dump(ring);
         app_sys_debug("consume %d data", sizeof(consume));
-        ret = ring_buffer_append_consume_data(ring, consume, sizeof(consume));
+        ret = ring_buffer_consume_data(ring, consume, sizeof(consume));
         assert(ret == 8);
         app_sys_debug("consume %d data indeed", ret);
         ring_buffer_dump(ring);
@@ -72,7 +72,7 @@ extern "C" {
         app_sys_debug("add %d data indeed", ret);
         ring_buffer_dump(ring);
         app_sys_debug("consume %d data", sizeof(consume));
-        ret = ring_buffer_append_consume_data(ring, consume, sizeof(consume));
+        ret = ring_buffer_consume_data(ring, consume, sizeof(consume));
         assert(ret == 5);
         app_sys_debug("consume %d data indeed", ret);
         ring_buffer_dump(ring);
@@ -85,7 +85,7 @@ extern "C" {
         app_sys_debug("add %d data indeed", ret);
         ring_buffer_dump(ring);
         app_sys_debug("consume %d data", sizeof(consume));
-        ret = ring_buffer_append_consume_data(ring, consume, sizeof(consume));
+        ret = ring_buffer_consume_data(ring, consume, sizeof(consume));
         assert(ret == 5);
         app_sys_debug("consume %d data indeed", ret);
         ring_buffer_dump(ring);
@@ -98,7 +98,7 @@ extern "C" {
         app_sys_debug("add %d data indeed", ret);
         ring_buffer_dump(ring);
         app_sys_debug("consume %d data", 0);
-        ret = ring_buffer_append_consume_data(ring, consume, 0);
+        ret = ring_buffer_consume_data(ring, consume, 0);
         assert(ret == 0);
         app_sys_debug("consume %d data indeed", ret);
         ring_buffer_dump(ring);
@@ -106,7 +106,7 @@ extern "C" {
         app_sys_debug("================================================");
 
         app_sys_debug("consume %d data", 1);
-        ret = ring_buffer_append_consume_data(ring, consume, 1);
+        ret = ring_buffer_consume_data(ring, consume, 1);
         assert(ret == 1);
         app_sys_debug("consume %d data indeed", ret);
         ring_buffer_dump(ring);
@@ -146,7 +146,7 @@ extern "C" {
         app_sys_debug("================================================");
 
         app_sys_debug("consume %d data", 12);
-        ret = ring_buffer_append_consume_data(ring, consume, 12);
+        ret = ring_buffer_consume_data(ring, consume, 12);
         assert(ret == 12);
         app_sys_debug("consume %d data indeed", ret);
         ring_buffer_dump(ring);
@@ -154,7 +154,7 @@ extern "C" {
         app_sys_debug("================================================");
 
         app_sys_debug("consume %d data", 12);
-        ret = ring_buffer_append_consume_data(ring, consume, 12);
+        ret = ring_buffer_consume_data(ring, consume, 12);
         assert(ret == 0);
         app_sys_debug("consume %d data indeed", 0);
         ring_buffer_dump(ring);

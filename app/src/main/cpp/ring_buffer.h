@@ -28,7 +28,7 @@ uint32_t ring_buffer_append_data(RingBuffer* thiz, uint8_t *data, uint32_t data_
  * @param[in] data_len buffer长度，如果RingBuffer中的数据长度小于buffer长度，返回实际消费的长度。
  * @return 实际消费的长度。
  */
-uint32_t ring_buffer_append_consume_data(RingBuffer* thiz, uint8_t* data, uint32_t data_len);
+uint32_t ring_buffer_consume_data(RingBuffer* thiz, uint8_t* data, uint32_t data_len);
 
 /** 打印所有在RingBuffer中的数据
  */

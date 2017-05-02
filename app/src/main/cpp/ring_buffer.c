@@ -70,7 +70,7 @@ uint32_t ring_buffer_get_buffer_len(RingBuffer* thiz) {
     return thiz->buffer_len;
 }
 
-uint32_t ring_buffer_append_consume_data(RingBuffer* thiz, uint8_t* data, uint32_t data_len) {
+uint32_t ring_buffer_consume_data(RingBuffer* thiz, uint8_t* data, uint32_t data_len) {
     if(thiz == NULL || data == NULL || data_len <= 0) {
         return 0;
     }
